@@ -12,7 +12,7 @@ This is our second project. After discussing ideas and common interests, we came
 
 ## Visuals
 
-<!-- Video demonstration if there's time? Or we can scrap this -->
+<!-- Video demonstration if there's time? Or we can scrap this. We'll at least have screenshots in the next section. -->
 
 ## Usage
 
@@ -20,7 +20,7 @@ This is our second project. After discussing ideas and common interests, we came
 
 ## Authors and tasks
 
-Mariana: APIs and js
-Karuna: html and css
-Faranak: routes and js
-Paul: Not 100% sure yet. Looking up information and not getting in the way.
+* Mariana: APIs and js
+* Karuna: html and css
+* Faranak: routes and js
+* Paul: Not 100% sure yet. Looking up information and not getting in the way.
