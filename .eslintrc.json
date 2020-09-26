@@ -3,10 +3,10 @@
     "ecmaVersion": 2017
   },
   "env": {
-    "es6": true,
-    "browser": true,
-    "commonjs": true,
-    "node": true
+    "es6": false,
+    "browser": false,
+    "commonjs": false,
+    "node": false
   },
   "extends": "prettier",
   "plugins": ["prettier"],
@@ -37,4 +37,4 @@
     "vars-on-top": "error",
     "yoda": "error"
   }
-}
+
