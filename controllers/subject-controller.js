@@ -1,13 +1,16 @@
-let subjects = [
-  { id: 0, title: "Javascript", description: "Watever" },
-  { id: 1, title: "C#", description: "Watever" },
-];
+const { subjects } = require("../data/database");
 
 const index = (req, res) => {
+  // rendering .hbs view of subjects and sending the subjects to the view
+  res.render("subjects/index", { subjects: subjects, title: "Subjects List!" });
+};
+
+const show = (req, res) => {
   console.log("subjects controller ");
   const subject = subjects.find((x) => x.id == req.params.subject_id);
 
-  res.json(subject);
+  res.render("subjects/show");
+  // res.json()
 };
 
-module.exports = { index };
+module.exports = { index, show };
