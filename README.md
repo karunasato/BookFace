@@ -12,7 +12,7 @@ This is our second project. After discussing ideas and common interests, we came
 
 ## Visuals
 
-<!-- Video demonstration if there's time? Or we can scrap this -->
+<!-- Video demonstration if there's time? Or we can scrap this. We'll at least have screenshots in the next section. -->
 
 ## Usage
 
