@@ -1,5 +1,7 @@
 {
+
   "name": "BookFace",
+
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -22,6 +24,8 @@
   },
   "devDependencies": {
     "cross-env": "^5.2.0",
+
     "nodemon": "^2.0.4"
   }
+
 }
