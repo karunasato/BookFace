@@ -1,4 +1,9 @@
-form.signup,
-form.login {
-  margin-top: 50px;
+*{
+  font-family: 'Times New Roman', Times, serif;
+
+  background-color: cyan;
+}
+.ui card{
+  text-align: center;
+  box-sizing: border-box;
 }
