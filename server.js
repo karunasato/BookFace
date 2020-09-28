@@ -4,7 +4,9 @@ const session = require("express-session");
 
 // ROUTES
 const userRoutes = require("./routes/user-routes");
-const subjectRoutes = require("./routes/subject-routes");
+const subjectRoutes = require("./routes/subjects-routes");
+const bookRoutes = require("./routes/books-routes");
+const videoRoutes = require("./routes/videos-routes");
 
 const exphbs = require("express-handlebars");
 
@@ -27,6 +29,8 @@ app.use(express.static("public"));
 
 app.use("/user", userRoutes);
 app.use("/subjects", subjectRoutes);
+app.use("/books", bookRoutes);
+app.use("/videos", videoRoutes);
 
 app.listen(PORT, () => {
   console.log("Server Running on port ", PORT);
