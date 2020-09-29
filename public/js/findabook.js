@@ -21,7 +21,7 @@ $(document).ready(()=> {
     $("#addBook").on("click", (event) => {
         event.preventDefault();
         //reveals the add to club button
-        $("#addToClub").show();
+        $("#addToGroup").show();
         // Grabs the input from the book title text
         newBook = $("#bookName").val().trim();
         
@@ -39,7 +39,7 @@ $(document).ready(()=> {
       }); 
       $("#changeBook").on("click", (event) => {
         event.preventDefault();
-        //reveals the add to club button
+        //reveals the add to group button
         // $("#addToClub").show();
         $('#add').show();
         // Grabs the input from the book title text
@@ -79,7 +79,7 @@ $(document).ready(()=> {
             //have it add to the handlebars and remove search feature
   
             //Select Book Button
-            $("#addToClub").on("click", (event) => {
+            $("#addToGroup").on("click", (event) => {
               event.preventDefault();
               $('#title').empty(title)
               $('#author').empty(author)
@@ -105,7 +105,7 @@ $(document).ready(()=> {
                 currentAuthor: author
               }
               
-              $.ajax("/api/clubs/" + id, {
+              $.ajax("/api/groups/" + id, {
                 type: "PUT",
                 data,
               }).then(
