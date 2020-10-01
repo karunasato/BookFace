@@ -5,12 +5,12 @@
     <div class="item">
       <img class="ui centered rounded image" src="" />
       <div class="content">
-        <span>{{#each Title}}{{/each}}</span>
+        <span>Content of video</span>
       </div>
       <div class="description">
         <p>summary of video</p>
       </div>
-      <a class="ui basic orange button" href="views/videos/edit.hbs">Edit</a>
+      <a class="ui basic orange button" href="/blogs/<%= blog._id %>/edit">Edit</a>
       <form id="delete" action="/blogs/<%= blog._id %>?_method=DELETE" method="DESTROY">
         <button class="ui basic red button">Delete</button>
       </form>

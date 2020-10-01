@@ -1,13 +1,10 @@
-*{
-  font-family: 'Times New Roman', Times, serif;
+i.icon {
+  font-size: 2em;
+}
+.container.main {
+  margin-top: 7em;
+}
 
-  background-color: cyan;
-}
-.ui card{
-  text-align: center;
-  box-sizing: border-box;
-}
-#body .extra .ui floated basic violet button{
-  font-weight: bolder;
-  
+#delete {
+  display: inline;
 }
