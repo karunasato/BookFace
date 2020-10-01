@@ -5,12 +5,16 @@
     <div class="item">
       <img class="ui centered rounded image" src="" />
       <div class="content">
-        <span>{{#each book}}{{/each}}</span>
+        <span>
+            {{#each book}}
+            {{/each}}
+        </span>
+        
       </div>
       <div class="description">
         <p>summary of book</p>
       </div>
-      <a class="ui basic orange button" href="views\books\edit.hbs">Edit</a>
+      <a class="ui basic orange button" href="books\edit.hbs">Edit</a>
       <form id="delete" action="/blogs/<%= blog._id %>?_method=DELETE" method="DESTROY">
         <button class="ui basic red button">Delete</button>
       </form>
