@@ -3,10 +3,14 @@ const express = require("express");
 const session = require("express-session");
 
 // ROUTES
-const userRoutes = require("./routes/user-routes");
-const subjectRoutes = require("./routes/subjects-routes");
-const bookRoutes = require("./routes/books-routes");
-const videoRoutes = require("./routes/videos-routes");
+const userRoutes = require("./routes/viewsRoutes/user-routes");
+const subjectRoutes = require("./routes/viewsRoutes/subjects-routes");
+const bookRoutes = require("./routes/viewsRoutes/books-routes");
+const videoRoutes = require("./routes/viewsRoutes/videos-routes");
+const bookselection = require("./routes/apiRoutes/bookselection");
+const externalApi = require("./routes/apiRoutes/externalAPI");
+const findabook = require("./routes/apiRoutes/findabook");
+const studygroup = require("./routes/apiRoutes/studygroup");
 
 const exphbs = require("express-handlebars");
 
@@ -31,6 +35,11 @@ app.use("/user", userRoutes);
 app.use("/subjects", subjectRoutes);
 app.use("/books", bookRoutes);
 app.use("/videos", videoRoutes);
+// app.use("/api/books", bookselection);
+app.use("/api/externalAPI", externalApi);
+// app.use("/api/findbook", findabook);
+// app.use("/api/studygroup", studygroup);
+
 
 app.listen(PORT, () => {
   console.log("Server Running on port ", PORT);

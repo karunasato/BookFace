@@ -1,5 +1,5 @@
 const express = require("express");
-const videosController = require("../controllers/videos-controller");
+const videosController = require("../../controllers/videos-controller");
 const router = express.Router();
 
 // These routes are for rendering pages
