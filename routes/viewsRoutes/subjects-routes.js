@@ -1,5 +1,5 @@
 const express = require("express");
-const subjectsController = require("../controllers/subjects-controller");
+const subjectsController = require("../../controllers/subjects-controller");
 const router = express.Router();
 
 // These routes are for rendering pages
