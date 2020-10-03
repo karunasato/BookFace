@@ -1,67 +1,35 @@
 <div class="ui main text container">
-        <div class="ui huge header">Welcome to BookFace!</div>
-        <p>BookFace is a study app for students who are looking for videos and/or book resources for web development related subjects </p>
-        
-        <div class="ui top attached segment">
-          <div class="ui divided items">
-            <h1>What would you like to study today?</h1>
-            <div class="item">
-              <div class="image">
-                <img src="assets\html-pic.png"/>
-              </div>
-              <div class="content">
-                <a class="header" href="subjects/show.hbs">HTML</a>
-                <div class="meta">
-                <div class="description">
-                  <p>HTML otherwise known as hyper text markup language, is the standard markup language for documents designed to be displayed in a web browser </p>
-                </div>
-                <div class="extra">
-                  <a class="ui floated basic violet button" href="subjects/show.hbs">
-                    Resources
-                    <i class="right chevron icon"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-        </div>
-        
-                <div class="item">
-                  <div class="image">
-                    <img src="assets\css.png"/>
-                  </div>
-                  <div class="content">
-                    <a class="header" href="subjects/show.hbs">CSS</a>
-                    <div class="meta">
-                    <div class="description">
-                      <p>CSS otherwise known as cascading style sheets, is used to design a webpage with variations in layout and design </p>
-                    </div>
-                    <div class="extra">
-                      <a class="ui floated basic violet button" href="subjects/show.hbs">
-                        Resources
-                        <i class="right chevron icon"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-            </div>
+  here
+  {{this.title}}
+  <div class="ui huge header">Welcome to BookFace!</div>
+  <p>BookFace is a study app for students who are looking for videos and/or book resources for web development related
+    subjects </p>
 
-            <div class="item">
-                <div class="image">
-                  <img src="assets\javascriptpic.PNG"/>
-                </div>
-                <div class="content">
-                  <a class="header" href="subjects/show.hbs">JavaScript</a>
-                  <div class="meta">
-                  <div class="description">
-                    <p>JavaScript (JS) is an object-oriented programming language commonly used to create interactive effects within web browsers </p>
-                  </div>
-                  <div class="extra">
-                    <a class="ui floated basic violet button" href="subjects/show.hbs>
-                      Resources
-                      <i class="right chevron icon"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
+  <div class="ui top attached segment">
+    <div class="ui divided items">
+      <h1>What would you like to study today?</h1>
+
+      {{#each subjects}}
+      <div class="item">
+        <div class="image">
+          <img src="assets\html-pic.png" />
+        </div>
+        <div class="content">
+          <a class="header" href="subjects/show.hbs">{{this.title}}</a>
+          <div class="meta">
+            <div class="description">
+              <p>{{this.desc}}</p>
+            </div>
+            <div class="extra">
+              <a class="ui floated basic violet button" href="/subjects/{{this.id}}">
+                Resources
+                <i class="right chevron icon"></i>
+              </a>
+            </div>
           </div>
-         
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</div>

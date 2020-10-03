@@ -1,31 +1,33 @@
-<h1>Showing a single subject view</h1>
+<h1>Showing a single subject {{subject.title}}</h1>
 <div class="ui segment">
-    <div class="ui two column very relaxed grid">
-      <div class="column">
-        <h1>Video Resources</h1>
-        <ul>
-          {{#each video}}
-          {{/each}} 
-        </ul>
-        
-      </div>
-      <div class="column">
-        <h1>Book Resources</h1>
-         <ul>
-          {{#each Book}}
-          {{/each}} 
-        </ul>
-      
-        
-      </div>
+  <div class="ui two column very relaxed grid">
+    <div class="column">
+      <h1>Video Resources</h1>
+      <ul>
+        {{#each videos}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+
     </div>
-    <div class="ui vertical divider">
-      
+    <div class="column">
+      <h1>Book Resources</h1>
+      <ul>
+        {{#each books}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+
+
     </div>
   </div>
-  <div class="extra">
-    <a class="ui floated basic violet button" href="subjects/index.hbs">
-      Study Different Subject
-      <i class="right chevron icon"></i>
-    </a>
+  <div class="ui vertical divider">
+
   </div>
+</div>
+<div class="extra">
+  <a class="ui floated basic violet button" href="/subjects">
+    Study Different Subject
+    <i class="right chevron icon"></i>
+  </a>
+</div>
