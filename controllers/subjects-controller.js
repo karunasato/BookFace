@@ -21,7 +21,7 @@ const show = async (req, res) => {
     subject = data.dataValues
   })
 
-  let videos = ['youtbe.com/gdgdas', 'youtbe.com/gdgdas']
+  let videos = ['youtube.com/gdgdas', 'youtube.com/gdgdas']
   let books = ['JS something', 'blah']
   /* CODE */
 
