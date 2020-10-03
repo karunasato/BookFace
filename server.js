@@ -8,10 +8,10 @@ const bodyParser = require("body-parser");
 const subjectRoutes = require("./routes/viewsRoutes/subjects-routes");
 const bookRoutes = require("./routes/viewsRoutes/books-routes");
 const videoRoutes = require("./routes/viewsRoutes/videos-routes");
-const bookselection = require("./routes/apiRoutes/bookselection");
-const externalApi = require("./routes/apiRoutes/externalAPI");
-const findabook = require("./routes/apiRoutes/findabook");
-const studygroup = require("./routes/apiRoutes/studygroup");
+// const bookselection = require("./routes/apiRoutes/bookselection");
+// const externalApi = require("./routes/apiRoutes/externalAPI");
+// const findabook = require("./routes/apiRoutes/findabook");
+// const studygroup = require("./routes/apiRoutes/studygroup");
 
 const exphbs = require("express-handlebars");
 
@@ -57,6 +57,7 @@ app.engine(
     helpers: myGlobals,
   })
 );
+
 app.set("view engine", ".hbs");
 
 app.use(express.urlencoded({ extended: true }));
@@ -64,6 +65,7 @@ app.use(express.json());
 app.use(express.static("public"));
 // We need to use sessions to keep track of our user's login status
 // Requiring our routes
+
 
 // app.use('/user', userRoutes)
 app.use("/subjects", subjectRoutes);

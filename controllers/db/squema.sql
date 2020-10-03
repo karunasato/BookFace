@@ -4,21 +4,21 @@ CREATE DATABASE study_group;
 
 USE study_group; 
 
-CREATE TABLE groups (
+CREATE TABLE `group` (
 id int AUTO_INCREMENT NOT NULL,
 groupName VARCHAR(30) NOT NULL,
 description VARCHAR (500) NOT NULL,
 currentlyReading VARCHAR (30),
 currentImgUrl VARCHAR (500),
-currentAuthor VARCHAR (30),
+currentAuth VARCHAR (30),
 PRIMARY KEY(id)
 );
 
-INSERT INTO goups (groupName, description, currentlyReading, currentImgUrl, currentAuthor)
+INSERT INTO `group` (groupName, description, currentlyReading, currentImgUrl, currentAuth)
 VALUES ("Group CSS", "This group studies CSS! If you are interested, please join. We meet every Thursday at 7pm.", "CSS: The Missing Manual","https://www.google.com/books/edition/CSS/UkObAgAAQBAJ?hl=en&gbpv=1&dq=css&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api","David Saywer McFarland");
-INSERT INTO goups (groupName, description, currentlyReading, currentImgUrl, currentAuthor)
+INSERT INTO `group` (groupName, description, currentlyReading, currentImgUrl, currentAuth)
 VALUES ("Group HTML", "This group studies HTML! If you are interested, please join. We meet every Thursday at 7pm.", "Head First HTML and CSS","https://www.google.com/books/edition/Head_First_HTML_and_CSS/BZIYQtV6yKsC?hl=en&gbpv=1&dq=html&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api","Elisabeth Robson and Eric Freeman");
-INSERT INTO goups (groupName, description, currentlyReading, currentImgUrl, currentAuthor)
+INSERT INTO `group` (groupName, description, currentlyReading, currentImgUrl, currentAuth)
 VALUES ("Group JavaScript", "This group studies JavaScript! If you are interested, please join. We meet every Thursday at 7pm.", "Eloquent JavaScript","https://www.google.com/books/edition/Eloquent_JavaScript/p1v6DwAAQBAJ?hl=en&gbpv=1&dq=javascript&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api","Marijn Haverbeke");
 
 
