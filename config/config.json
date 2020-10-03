@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
+    "password": "Myyear2020",
     "database": "bookface",
     "host": "127.0.0.1",
     "dialect": "mysql"
