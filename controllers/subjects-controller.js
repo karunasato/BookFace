@@ -30,7 +30,7 @@ const show = async (req, res) => {
     .get("https://www.googleapis.com/books/v1/volumes", {
       params: {
         q: subject.title,
-        key: "AIzaSyAYeIrbfE6DDlKyaoiBQQS2_IlW1fbz9vk",
+        key: process.env.BOOKS_API_KEY,
       },
     })
     .then((response) => {
