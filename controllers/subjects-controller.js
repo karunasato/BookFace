@@ -1,4 +1,5 @@
 const Subject = require("../src/models/Subject");
+const axios = require("axios");
 
 // HBS Renderings
 
@@ -23,11 +24,24 @@ const show = async (req, res) => {
   });
 
   let videos = ["youtube.com/gdgdas", "youtube.com/gdgdas"];
-  let books = ["JS something", "blah"];
+  let books = [];
   /* CODE */
+  await axios
+    .get("https://www.googleapis.com/books/v1/volumes", {
+      params: {
+        q: subject.title,
+        key: "AIzaSyAYeIrbfE6DDlKyaoiBQQS2_IlW1fbz9vk",
+      },
+    })
+    .then((response) => {
+      books = response.data.items;
+      console.log(books);
+    })
+    .catch((error) => {
+      console.log("GOOGLE API Error" + error);
+    });
 
   /* ADD LINKS TO APIS */
-
   res.render("subjects/show", { subject, videos, books });
 };
 
