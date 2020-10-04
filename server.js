@@ -2,9 +2,11 @@
 const express = require("express");
 const session = require("express-session");
 const bodyParser = require("body-parser");
+require("dotenv").config();
+const db = require("./src/models");
 
 // ROUTES
-// const userRoutes = require('./routes/viewsRoutes/user-routes')
+const authRoutes = require('./routes/viewsRoutes/user-routes');
 const subjectRoutes = require("./routes/viewsRoutes/subjects-routes");
 const bookRoutes = require("./routes/viewsRoutes/books-routes");
 const videoRoutes = require("./routes/viewsRoutes/videos-routes");
@@ -12,7 +14,7 @@ const videoRoutes = require("./routes/viewsRoutes/videos-routes");
 // const externalApi = require("./routes/apiRoutes/externalAPI");
 // const findabook = require("./routes/apiRoutes/findabook");
 // const studygroup = require("./routes/apiRoutes/studygroup");
-
+const htmlRoutes = require('./routes/htmlRoutes')
 const exphbs = require("express-handlebars");
 
 // Setting up port and requiring models for syncing
@@ -68,16 +70,23 @@ app.use(express.static("public"));
 
 
 // app.use('/user', userRoutes)
-app.use("/subjects", subjectRoutes);
-app.use("/books", bookRoutes);
-app.use("/videos", videoRoutes);
+
+//data routes
+app.use("/api/subjects", subjectRoutes);
+app.use("/api/books", bookRoutes);
+app.use("/api/videos", videoRoutes);
+app.use("/api/user", authRoutes)
+
+app.use(htmlRoutes)
 // app.use("/api/books", bookselection);
 // app.use('/api/externalAPI', externalApi)
 // app.use("/api/findbook", findabook);
 // app.use("/api/studygroup", studygroup);
 
 // require("./src/bootstrap")();
+db.sequelize.sync({force:true}).then(()=> {
 
-app.listen(PORT, () => {
-  console.log("Server Running on port ", PORT);
-});
+  app.listen(PORT, () => {
+    console.log("Server Running on port ", PORT);
+  });
+})
