@@ -6,11 +6,23 @@ router.get("/books", (req,res)=> {
     res.render("books")
 }) 
 
+router.get("/books/show", (req,res)=> {
+    res.render("showBooks")
+}) 
+
+
 router.get("/videos", (req,res)=> {
     res.render("videos")
 })
+
+router.get("/videos/show", (req,res)=> {
+    res.render("showVideos")
+})
 router.get("/subjects", (req,res)=> {
     res.render("subjects")
+})
+router.get("/subjects/show", (req,res)=> {
+    res.render("showSubjects")
 })
 
 router.get("/signup", (req,res)=> {
