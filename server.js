@@ -1,25 +1,15 @@
 // Requiring necessary npm packages
 const express = require("express");
-const session = require("express-session");
 const bodyParser = require("body-parser");
-require("dotenv").config();
-const db = require("./src/models");
-
-// ROUTES
-const authRoutes = require('./routes/viewsRoutes/user-routes');
-const subjectRoutes = require("./routes/viewsRoutes/subjects-routes");
-const bookRoutes = require("./routes/viewsRoutes/books-routes");
-const videoRoutes = require("./routes/viewsRoutes/videos-routes");
-// const bookselection = require("./routes/apiRoutes/bookselection");
-// const externalApi = require("./routes/apiRoutes/externalAPI");
-// const findabook = require("./routes/apiRoutes/findabook");
-// const studygroup = require("./routes/apiRoutes/studygroup");
-const htmlRoutes = require('./routes/htmlRoutes')
 const exphbs = require("express-handlebars");
+// ROUTES
+const subjectsAPIRouter = require("./routes/api/subjects-apis");
+const subjectsViewRouter = require("./routes/views/subjects-views");
+
+require("dotenv").config();
 
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 8080;
-// const db = require("./models");
 
 var myGlobals = {
   user: function (ctx) {
@@ -32,24 +22,10 @@ var myGlobals = {
 const app = express();
 
 /* BODY PARSER */
-
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
-
-/* * * * * * * */
-
-// Session
-app.set("trust proxy", 1); // trust first proxy
-app.use(
-  session({
-    secret: "keyboard cat",
-    resave: false,
-    saveUninitialized: false,
-    cookie: { maxAge: 60000 },
-  })
-);
 
 // Set viewengine
 app.engine(
@@ -65,28 +41,15 @@ app.set("view engine", ".hbs");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
-// We need to use sessions to keep track of our user's login status
-// Requiring our routes
 
+// API ROUTER
+app.use("/api/subjects", subjectsAPIRouter);
 
-// app.use('/user', userRoutes)
-
-//data routes
-app.use("/api/subjects", subjectRoutes);
-app.use("/api/books", bookRoutes);
-app.use("/api/videos", videoRoutes);
-app.use("/api/user", authRoutes)
-
-app.use(htmlRoutes)
-// app.use("/api/books", bookselection);
-// app.use('/api/externalAPI', externalApi)
-// app.use("/api/findbook", findabook);
-// app.use("/api/studygroup", studygroup);
+// VIEWS ROUTER
+app.use("/subjects", subjectsViewRouter);
+app.use("/", (req, res) => res.render("landing"));
 
 // require("./src/bootstrap")();
-db.sequelize.sync({force:true}).then(()=> {
-
-  app.listen(PORT, () => {
-    console.log("Server Running on port ", PORT);
-  });
-})
+app.listen(PORT, () => {
+  console.log("Server Running on port ", PORT);
+});

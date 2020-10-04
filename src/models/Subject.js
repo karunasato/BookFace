@@ -1,14 +1,13 @@
+const Sequelize = require("sequelize");
+const conn = require("../database/connection");
 
-module.exports = function(sequelize, DataTypes) {
-  const Subject = sequelize.define("Subject", {
-  title: DataTypes.STRING,
-  desc: DataTypes.STRING,
+module.exports = conn.define("subject", {
+  title: Sequelize.STRING(100),
+  desc: Sequelize.STRING(100),
   id: {
-    type: DataTypes.INTEGER,
+    type: Sequelize.INTEGER(11),
     allowNull: false,
     autoIncrement: true,
-    primaryKey: true
-  }
+    primaryKey: true,
+  },
 });
-return Subject
-}

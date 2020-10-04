@@ -1,35 +1,31 @@
-<div class="ui main text container">
-  
-  {{this.title}}
-  <div class="ui huge header">Welcome to BookFace!</div>
-  <p>BookFace is a study app for students who are looking for videos and/or book resources for web development related
-    subjects </p>
+<div class="ui huge header">Welcome to BookFace!</div>
+<p>BookFace is a study app for students who are looking for videos and/or book resources for web development related
+  subjects </p>
 
-  <div class="ui top attached segment">
-    <div class="ui divided items">
-      <h1>What would you like to study today?</h1>
+<div class="ui top attached segment">
+  <div class="ui divided items">
+    <h1>What would you like to study today?</h1>
 
-      {{#each subjects}}
-      <div class="item">
-        <div class="image">
-          <img src="assets\html-pic.png" />
-        </div>
-        <div class="content">
-          <a class="header" href="/subjects/show">{{this.title}}</a>
-          <div class="meta">
-            <div class="description">
-              <p>{{this.desc}}</p>
-            </div>
-            <div class="extra">
-              <a class="ui floated basic violet button" href="/subjects/{{this.id}}">
-                Resources
-                <i class="right chevron icon"></i>
-              </a>
-            </div>
+    {{#each subjects}}
+    <div class="item">
+      <div class="image">
+        <img src="assets\html-pic.png" />
+      </div>
+      <div class="content">
+        <a class="header" href="/subjects/{{this.id}}">{{this.title}}</a>
+        <div class=" meta">
+          <div class="description">
+            <p>{{this.desc}}</p>
+          </div>
+          <div class="extra">
+            <a class="ui floated basic violet button" href="/subjects/{{this.id}}">
+              Resources
+              <i class="right chevron icon"></i>
+            </a>
           </div>
         </div>
       </div>
-      {{/each}}
     </div>
+    {{/each}}
   </div>
 </div>
