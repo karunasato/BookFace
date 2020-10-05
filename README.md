@@ -9,14 +9,16 @@ This is our second project. After discussing ideas and common interests, we came
 ## Installation
 
 <!-- Guidance or steps on installation process -->
-
-## Visuals
-
-<!-- Video demonstration if there's time? Or we can scrap this. We'll at least have screenshots in the next section. -->
+npm i handlebar
+npm i sequelize
+npm i express
 
 ## Usage
 
 <!-- Insert main screenshots here to show expected output. Include links. -->
+![landing](public/assets/screenshots/Landing.png)
+![topics](public/assets/screenshots/Topics.png)
+![results](public/assets/screenshots/Results.png)
 
 ## Authors and tasks
 
