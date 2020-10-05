@@ -5,7 +5,11 @@
       <h1>Video Resources</h1>
       <ul>
         {{#each videos}}
-        <li>{{this}}</li>
+        <li>
+          <a href="https://youtube.com/watch?v={{this.id.videoId}}" target="_blank">
+            {{this.snippet.title}}
+          </a>
+        </li>
         {{/each}}
       </ul>
 

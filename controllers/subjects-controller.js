@@ -19,9 +19,13 @@ const index = async (req, res) => {
 //   /subjects/:id
 const show = async (req, res) => {
   let subject;
-  await Subject.findByPk(parseInt(req.params.subject_id)).then((data) => {
-    subject = data.dataValues;
-  });
+  try {
+    await Subject.findByPk(parseInt(req.params.subject_id)).then((data) => {
+      subject = data.dataValues;
+    });
+  } catch (error) {
+    res.status(404).render("404", { error });
+  }
 
   let videos = ["youtube.com/gdgdas", "youtube.com/gdgdas"];
   let books = [];
@@ -35,6 +39,23 @@ const show = async (req, res) => {
     })
     .then((response) => {
       books = response.data.items;
+      console.log(books);
+    })
+    .catch((error) => {
+      console.log("GOOGLE API Error" + error);
+    });
+
+  await axios
+    .get("https://www.googleapis.com/youtube/v3/search", {
+      params: {
+        q: subject.title,
+        part: "snippet",
+        maxResults: 25,
+        key: process.env.VIDEOS_API_KEY,
+      },
+    })
+    .then((response) => {
+      videos = response.data.items;
       console.log(books);
     })
     .catch((error) => {
