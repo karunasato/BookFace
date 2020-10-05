@@ -1,21 +1,23 @@
 module.exports = {
   development: {
-    username: "root",
-    password: process.env.sqlpw,
-    database: "bookface",
-    host: "127.0.0.1",
+    username: "bm39a8f5w4gv73jo",
+    password: "b31bfasl42jty8sm",
+    database: "wychdah450qu4bos",
+    host: "durvbryvdw2sjcm5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     dialect: "mysql",
   },
   test: {
-    username: "root",
-    password: "password",
-    database: "database_test",
-    host: "127.0.0.1",
+    username: process.env.sqluser,
+    password: process.env.sqlpw,
+    database: process.env.sqldatabase,
+    host: process.env.sqlhost,
     dialect: "mysql",
   },
   production: {
-    use_env_variable:
-      "mysql://bm39a8f5w4gv73jo:b31bfasl42jty8sm@durvbryvdw2sjcm5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/wychdah450qu4bos",
+    username: "bm39a8f5w4gv73jo",
+    password: "b31bfasl42jty8sm",
+    database: "wychdah450qu4bos",
+    host: "durvbryvdw2sjcm5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     dialect: "mysql",
   },
 };
