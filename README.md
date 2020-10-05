@@ -9,9 +9,9 @@ This is our second project. After discussing ideas and common interests, we came
 ## Installation
 
 <!-- Guidance or steps on installation process -->
-npm i handlebar
-npm i sequelize
-npm i express
+* npm i handlebar
+* npm i sequelize
+* npm i express
 
 ## Usage
 
