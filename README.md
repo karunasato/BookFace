@@ -15,10 +15,16 @@ This is our second project. After discussing ideas and common interests, we came
 
 ## Usage
 
-<!-- Insert main screenshots here to show expected output. Include links. -->
+<!-- Screenshots go here -->
 ![landing](public/assets/screenshots/Landing.png)
 ![topics](public/assets/screenshots/Topics.png)
 ![results](public/assets/screenshots/Results.png)
+
+## Links
+
+<!-- Github and heroku links -->
+* https://github.com/karunasato/BookFace/
+* https://bookface2020.herokuapp.com/
 
 ## Authors and tasks
 
