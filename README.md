@@ -51,7 +51,7 @@ This is our second project. After discussing ideas and common interests, we came
 ## <div align="center">Authors and tasks</div>
 <br>
 
-* Mariana: APIs and js
-* Karuna: html, handlebars, and css
-* Faranak: routes and js
+* Mariana: APIs and JavaScript
+* Karuna: HTML, handlebars, and CSS
+* Faranak: routes and JavaScript
 * Paul: Readme
