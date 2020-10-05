@@ -1,8 +1,13 @@
 const Sequelize = require("sequelize");
 
-const sequelize = new Sequelize("bookface", "root", "Myyear2020", {
-  host: "127.0.0.1",
-  dialect: "mysql",
-  operatorsAliases: false,
-});
+const sequelize = new Sequelize(
+  process.env.sqldatabase,
+  process.env.sqluser,
+  process.env.sqlpw,
+  {
+    host: process.env.sqlpw,
+    dialect: "mysql",
+    operatorsAliases: false,
+  }
+);
 module.exports = sequelize;
