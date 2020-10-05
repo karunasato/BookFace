@@ -12,9 +12,8 @@ require("dotenv").config();
 const PORT = process.env.PORT || 8080;
 
 var myGlobals = {
-  user: function (ctx) {
-    console.log(ctx.data.exphbs.helpers);
-    return "hey";
+  random: function () {
+    return Math.floor(Math.random() * (9 - 1) + 1);
   },
 };
 
