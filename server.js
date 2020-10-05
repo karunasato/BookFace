@@ -46,6 +46,7 @@ app.use("/api/subjects", subjectsAPIRouter);
 
 // VIEWS ROUTER
 app.use("/subjects", subjectsViewRouter);
+app.use("/info", (req, res) => res.render("info"));
 app.use("/", (req, res) => res.render("landing"));
 
 // require("./src/bootstrap")();
