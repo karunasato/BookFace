@@ -13,6 +13,21 @@ This is our second project. After discussing ideas and common interests, we came
 * npm i sequelize
 * npm i express
 
+## Technologies Used
+
+* HTML
+* CSS
+* Javascript
+* Handlebars
+* Bootstrap
+* Sequelize
+* MySQL
+* Express
+* Dotenv
+* Passport
+* Google Books API
+* YouTube API
+
 ## Usage
 
 <!-- Screenshots go here -->
