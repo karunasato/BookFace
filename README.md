@@ -18,12 +18,11 @@ This is our second project. After discussing ideas and common interests, we came
 ## <div align="center">Technologies Used</div>
 <br>
 
-* HTML
+* Node.js
 * CSS
 * Javascript
 * Handlebars
 * Bootstrap
-* Node.js
 * Sequelize
 * MySQL
 * Express
@@ -52,6 +51,6 @@ This is our second project. After discussing ideas and common interests, we came
 <br>
 
 * Mariana: APIs and JavaScript
-* Karuna: HTML, handlebars, and CSS
-* Faranak: routes and JavaScript
+* Karuna: Handlebars and CSS
+* Faranak: Routes and JavaScript
 * Paul: Readme
