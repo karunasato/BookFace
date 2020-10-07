@@ -8,13 +8,6 @@ module.exports = {
     host: process.env.sqlhost,
     dialect: "mysql",
   },
-  // development: {
-  //   username: "bm39a8f5w4gv73jo",
-  //   password: "b31bfasl42jty8sm",
-  //   database: "wychdah450qu4bos",
-  //   host: "durvbryvdw2sjcm5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-  //   dialect: "mysql",
-  // },
   test: {
     username: process.env.sqluser,
     password: process.env.sqlpw,
