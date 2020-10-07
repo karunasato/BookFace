@@ -1,0 +1,41 @@
+<h1>Showing a single subject {{subject.title}}</h1>
+<div class="ui segment">
+  <div class="ui two column very relaxed grid">
+    <div class="column">
+      <h1>Video Resources</h1>
+      <ul>
+        {{#each videos}}
+        <li>
+          <a href="https://youtube.com/watch?v={{this.id.videoId}}" target="_blank">
+            {{this.snippet.title}}
+          </a>
+        </li>
+        {{/each}}
+      </ul>
+
+    </div>
+    <div class="column">
+      <h1>Book Resources</h1>
+      <ul>
+        {{#each books}}
+        <li>
+          <a href="{{this.volumeInfo.previewLink}}" target="_blank">
+            {{this.volumeInfo.title}}
+          </a>
+        </li>
+        {{/each}}
+      </ul>
+
+
+    </div>
+  </div>
+  <div class="ui vertical divider">
+
+  </div>
+</div>
+<div class="extra">
+  <a class="ui floated basic violet button" href="/subjects">
+    Study Different Subject
+    <i class="right chevron icon"></i>
+  </a>
+</div>
