@@ -1,11 +1,12 @@
 const Sequelize = require("sequelize");
+require("dotenv").config();
 
 const sequelize = new Sequelize(
-  "wychdah450qu4bos",
-  "bm39a8f5w4gv73jo",
-  "b31bfasl42jty8sm",
+  process.env.sqldatabase,
+  process.env.sqluser,
+  process.env.sqlpw,
   {
-    host: "durvbryvdw2sjcm5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    host: process.env.sqlhost,
     dialect: "mysql",
     operatorsAliases: false,
   }
